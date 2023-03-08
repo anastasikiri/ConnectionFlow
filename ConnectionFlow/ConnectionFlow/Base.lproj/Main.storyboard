@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dXs-Pg-UG8">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Connection View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ConnectionViewController" customModule="ConnectionFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SEARCHING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCU-cm-lr9">
+                                <rect key="frame" x="130.66666666666666" y="318" width="131.99999999999997" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember to keep your device on and within 6 feet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2kM-y0-cIR">
+                                <rect key="frame" x="49.333333333333343" y="361" width="294.33333333333326" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Devices found:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3u5-F9-2Xt">
+                                <rect key="frame" x="20" y="396" width="120" height="21.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XlH-70-Zg4">
+                                <rect key="frame" x="0.0" y="421.66666666666674" width="393" height="306.33333333333326"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXc-dr-RO3">
+                                <rect key="frame" x="127.33333333333333" y="753" width="138.33333333333337" height="35"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Stop searching"/>
+                                <connections>
+                                    <action selector="stopPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ciV-xr-LqO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGv-E8-4CR">
+                                <rect key="frame" x="164" y="203" width="65" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65" id="Q9N-yO-ZQv"/>
+                                    <constraint firstAttribute="height" constant="65" id="S7i-qM-ROZ"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="BluetoothImage"/>
+                                <connections>
+                                    <action selector="searchPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nd3-0H-dpi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XlH-70-Zg4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2E2-WP-kl1"/>
+                            <constraint firstItem="2kM-y0-cIR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3V6-zn-iuA"/>
+                            <constraint firstItem="cGv-E8-4CR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="7rm-8g-yzA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXc-dr-RO3" secondAttribute="bottom" constant="30" id="8zk-Xq-RXx"/>
+                            <constraint firstItem="3u5-F9-2Xt" firstAttribute="top" secondItem="2kM-y0-cIR" secondAttribute="bottom" constant="20" id="A2k-Tv-q6p"/>
+                            <constraint firstItem="XlH-70-Zg4" firstAttribute="top" secondItem="3u5-F9-2Xt" secondAttribute="bottom" constant="4" id="OhW-ds-HVO"/>
+                            <constraint firstItem="WCU-cm-lr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uhh-gu-F2k"/>
+                            <constraint firstItem="bXc-dr-RO3" firstAttribute="top" secondItem="XlH-70-Zg4" secondAttribute="bottom" constant="25" id="X7O-eH-4r4"/>
+                            <constraint firstItem="cGv-E8-4CR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zid-G8-bFJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3u5-F9-2Xt" secondAttribute="trailing" symbolic="YES" id="ccX-p8-ijc"/>
+                            <constraint firstItem="WCU-cm-lr9" firstAttribute="top" secondItem="cGv-E8-4CR" secondAttribute="bottom" constant="50" id="i8Z-fd-d3A"/>
+                            <constraint firstItem="3u5-F9-2Xt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="nmq-7Q-EXT"/>
+                            <constraint firstItem="XlH-70-Zg4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w2J-dT-Po5"/>
+                            <constraint firstItem="2kM-y0-cIR" firstAttribute="top" secondItem="WCU-cm-lr9" secondAttribute="bottom" constant="15" id="x28-EN-xGI"/>
+                            <constraint firstItem="bXc-dr-RO3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zw3-QN-8yk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6JP-pb-th4"/>
+                    <connections>
+                        <outlet property="searchLabelOutlet" destination="WCU-cm-lr9" id="C2b-0t-pz5"/>
+                        <outlet property="stopButtonOutlet" destination="bXc-dr-RO3" id="Y4E-pZ-5aw"/>
+                        <outlet property="tableView" destination="XlH-70-Zg4" id="Ego-vb-S1D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4747.3282442748086" y="-27.464788732394368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZMV-5n-Vt6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXs-Pg-UG8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Rqt-YT-Fk7">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="s8x-qD-0MX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wnp-bQ-p9L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3820.6106870229005" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BluetoothImage" width="512" height="512"/>
+    </resources>
+</document>
